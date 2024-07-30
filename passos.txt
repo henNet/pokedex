@@ -11,3 +11,4 @@
 11) Implementar função de busca inicialmente com o nome todo
 13) Corrigir o id 
 12) Depois usar o startsWith
+14) Caso tenha tempo, mostrar a abertura de outra página

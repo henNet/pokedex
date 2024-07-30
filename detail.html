@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes</title>
+  </head>
+  <body>
+    <div style="display: flex; align-items: center; flex-direction: column">
+      <img src="" width="150px" />
+      <h1 id="name"></h1>
+      <h1 id="type"></h1>
+    </div>
+    <script>
+      var id = new URLSearchParams(window.location.search).get("id");
+
+      async function capturarPokemons() {
+        var resposta = await fetch("https://pokeapi.co/api/v2/pokemon/" + id);
+        var dados = await resposta.json();
+
+        console.log(dados);
+        var name = document.querySelector("#name");
+        var type = document.querySelector("#type");
+        var img = document.querySelector("img");
+        name.innerHTML = dados.name;
+        type.innerHTML = dados.types[0].type.name;
+        img.src =
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+          id +
+          ".png";
+      }
+
+      capturarPokemons();
+    </script>
+  </body>
+</html>

@@ -33,6 +33,12 @@ function mostrarPokemons(pokemons) {
        <span class="id">${id}</span>
        <span>${pokemons[i].name}</span>`;
 
+    var btn = document.createElement("button");
+    btn.classList.add(id + "");
+    btn.innerHTML = "Ver";
+    btn.addEventListener("click", detalharPokemon);
+    pokeCard.appendChild(btn);
+
     pokeContainer.appendChild(pokeCard);
   }
 }
@@ -48,6 +54,14 @@ function buscarPokemon() {
   }
 
   mostrarPokemons(pokemonBuscado);
+}
+
+function detalharPokemon(event) {
+  let id = event.target.className;
+  // window.location.href = `./detail.html?id=${id}`;
+  var a = document.createElement("a");
+  a.href = `./detail.html?id=${id}&type="Raio"`;
+  a.click();
 }
 
 capturarPokemons();
