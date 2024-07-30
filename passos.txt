@@ -1,0 +1,13 @@
+1) Fazer estrutura básica HTML, CSS e JS
+2) Fornecer Link das Imagens
+3) Fazer Container e Card (fazer com 2 cards mesmos)
+4) Mostrar como usar a api pokeapi
+5) Ajustar a url para pegar a quantidade de pokemons definida em código
+6) Criar a função de mostrarPokemons
+7) Criar pokeCard aos poucos
+8) Finalizar pokeCard com todas as informações
+9) Ajustar grid para ficar responsivo
+10) Inserir input de busca
+11) Implementar função de busca inicialmente com o nome todo
+13) Corrigir o id 
+12) Depois usar o startsWith
